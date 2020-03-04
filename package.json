@@ -1,0 +1,23 @@
+{
+  "name": "weather-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harsh2009/weather-api.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/harsh2009/weather-api/issues"
+  },
+  "homepage": "https://github.com/harsh2009/weather-api#readme",
+  "dependencies": {
+    "expess": "0.0.1-security",
+    "nodemon": "^2.0.2"
+  }
+}
