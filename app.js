@@ -19,7 +19,7 @@ app.get("/", function (req, res) {
             const description = weatherData.weather[0].description
             console.log(description);
             res.write("<p>description of weather is </p>"+description);
-            res.write("<h1>current temperature in london is " +temp+" degree cencious </h1>")
+            res.write("<h1>current temperature in london is " +temp+" degree conscious </h1>");
             res.send();
         });
     });
