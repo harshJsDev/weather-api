@@ -8,18 +8,16 @@ app.get("/", function (req, res) {
     https.get(url, function (response) {
         console.log(response.statusCode);
         response.on("data", function (data) {
-            console.log(data);
+            
 
             const weatherData = JSON.parse(data);
-            console.log(weatherData);
-
             const temp = weatherData.main.temp;
-            console.log("temperature = " + temp);
-
-            const description = weatherData.weather[0].description
-            console.log(description);
-            res.write("<p>description of weather is </p>"+description);
-            res.write("<h1>current temperature in london is " +temp+" degree conscious </h1>");
+            const description = weatherData.weather[0].description;
+            const icon = weatherData.weather[0].icon
+            const imageUrl = "https://openweathermap.org/img/wn/" + icon + "@2x.png"
+            res.write("<p>description of weather is </p>" + description);
+            res.write("<h1>current temperature in london is " + temp + " degree conscious </h1>");
+            res.write("<img src=" + imageUrl + "/>");
             res.send();
         });
     });
